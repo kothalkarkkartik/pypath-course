@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PyPath — Python from Zero to DSA</title>
+  <meta name="description" content="17 Python chapters + 16 DSA chapters, 190+ exercises, 3 projects, 90 quiz questions. Python from zero to DSA — kid-friendly notes, runnable code, solutions, quizzes and a progress tracker." />
+  <link rel="stylesheet" href="assets/style.css?v=1794413624" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b1020'/%3E%3Ctext x='50%25' y='55%25' font-family='Arial' font-size='28' font-weight='bold' fill='%2322d3ee' text-anchor='middle' dominant-baseline='middle'%3EPy%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <div class="app">
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#/dashboard">
+        <span class="brand-mark">Py</span>
+        <span class="brand-text">
+          <span class="brand-name">PyPath</span>
+          <span class="brand-sub">from zero to DSA</span>
+        </span>
+      </a>
+
+      <button class="search-trigger" id="searchTrigger" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span>Search chapters, exercises...</span>
+        <kbd>Ctrl K</kbd>
+      </button>
+
+      <nav class="nav" aria-label="Main navigation">
+        <div class="nav-group-label">🐍 Python course</div>
+        <a class="nav-item" href="#/dashboard" data-nav="dashboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>
+          Dashboard
+        </a>
+        <a class="nav-item" href="#/chapters" data-nav="chapters">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          Python Chapters
+          <span class="nav-count" id="navChapterCount">17</span>
+        </a>
+        <a class="nav-item" href="#/projects" data-nav="projects">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          Python Projects
+        </a>
+        <a class="nav-item" href="#/quiz" data-nav="quiz">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.6 2.24c-.7.4-1.1 1-1.1 1.76v.5"/><path d="M12 17h.01"/></svg>
+          Python Quiz
+        </a>
+        <a class="nav-item" href="#/cheatsheet" data-nav="cheatsheet">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+          Python Cheatsheet
+        </a>
+        <a class="nav-item" href="#/game" data-nav="game">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 11h4M8 9v4M15 12h.01M18 10h.01"/><rect x="2" y="6" width="20" height="12" rx="3"/></svg>
+          Practice Game
+          <span class="nav-new">play</span>
+        </a>
+        <a class="nav-item" href="#/playground" data-nav="playground">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m8 8-5 4 5 4"/><path d="m16 8 5 4-5 4"/><path d="m13 5-2 14"/></svg>
+          Python Playground
+          <span class="nav-new">run</span>
+        </a>
+
+        <div class="nav-group-label dsa-label">⌘ DSA course</div>
+        <a class="nav-item dsa-item" href="#/dsa" data-nav="dsa">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18"/><path d="M5 8h14"/><path d="M7 21V8l5-5 5 5v13"/></svg>
+          DSA Home
+          <span class="nav-count" id="navDsaCount">16</span>
+        </a>
+        <a class="nav-item dsa-item" href="#/dsa-quiz" data-nav="dsa-quiz">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.6 2.24c-.7.4-1.1 1-1.1 1.76v.5"/><path d="M12 17h.01"/></svg>
+          DSA Quiz
+        </a>
+        <a class="nav-item dsa-item" href="#/dsa-cheatsheet" data-nav="dsa-cheatsheet">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+          DSA Cheatsheet
+        </a>
+      </nav>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">
+          <span>Python chapters</span>
+          <span id="sidebarProgressText">0/17</span>
+        </div>
+        <div class="chapter-nav" id="chapterNav"></div>
+      </div>
+
+      <div class="sidebar-section dsa-section">
+        <div class="sidebar-label">
+          <span>DSA chapters</span>
+          <span id="dsaProgressText">0/16</span>
+        </div>
+        <div class="chapter-nav" id="dsaChapterNav"></div>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="streak-card">
+          <span class="flame" aria-hidden="true">🔥</span>
+          <div>
+            <strong id="sidebarStreak">0</strong>
+            <span>day streak</span>
+          </div>
+          <span class="streak-hint">come daily</span>
+        </div>
+        <div class="progress-mini">
+          <div class="bar"><span id="sidebarProgressBar"></span></div>
+          <small>Auto-saved in your browser</small>
+        </div>
+      </div>
+    </aside>
+
+    <div class="scrim" id="scrim"></div>
+
+    <!-- ================= MAIN ================= -->
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <div class="crumbs" id="crumbs">Dashboard</div>
+        <div class="topbar-actions">
+          <button class="search-pill" id="searchPill" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <span>Search</span>
+            <kbd>Ctrl K</kbd>
+          </button>
+          <button class="kid-toggle" id="kidBtn" type="button" title="Switch between super simple notes and full notes">
+            <span aria-hidden="true">🧒</span><span id="kidLabel">Kid mode</span>
+          </button>
+          <button class="icon-btn" id="themeBtn" type="button" aria-label="Change theme"></button>
+          <button class="streak-pill" id="streakPill" type="button" title="Daily streak">
+            <span aria-hidden="true">🔥</span><span id="topStreak">0</span>
+          </button>
+        </div>
+      </header>
+
+      <main id="view" class="view" tabindex="-1"></main>
+
+      <footer class="footer">
+        <span>PyPath &bull; Python 3.12 &bull; progress is saved only in this browser</span>
+        <span id="footerStats"></span>
+      </footer>
+    </div>
+  </div>
+
+  <!-- ================= SEARCH MODAL ================= -->
+  <div class="search-modal" id="searchModal" aria-hidden="true">
+    <div class="search-box" role="dialog" aria-modal="true" aria-label="Search">
+      <div class="search-input-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="searchInput" type="search" placeholder="Chapter, exercise, topic... (try: strings, OOP, decorator)" autocomplete="off" />
+        <button class="kbd-btn" id="searchClose" type="button">Esc</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+      <div class="search-foot">No arrow keys — just click. Open it anytime with Ctrl K.</div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="assets/data.js?v=1794413624"></script>
+  <script src="assets/app.js?v=1794413624"></script>
+</body>
+</html>
